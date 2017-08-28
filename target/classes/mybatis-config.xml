@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-config.dtd">
+<!-- dtd mybatis 约束文件 约束了 定义类型,定义顺序比如<typeAliases> 必须写后面 -->
+<configuration>
+    <settings>
+		<!-- mybatis控制台LOG输出 -->
+        <setting name="logImpl" value="LOG4J2" />
+    </settings>
+    <!-- <typeAliases>
+    	<typeAlias type="cn.tedu.ttms.product.entity.Team" alias="team"/>
+    	<typeAlias type="cn.tedu.ttms.product.entity.Project" alias="project"/>
+    </typeAliases> -->
+    
+    <!-- 为mapper文件中的参数类型,返回值类型定义别名,采用package元素定义时
+    	那么默认类的别名为类名并且第一个单词的首字母小写. -->
+    <typeAliases>
+    	<package name="cn.tedu.ttms.product.entity"/>
+    	<package name="cn.tedu.ttms.attachment.entity"/>
+    </typeAliases>
+</configuration>

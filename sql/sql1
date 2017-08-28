@@ -1,0 +1,15 @@
+desc tms_projects;
+select id,code,name from tms_projects;
+方案1:
+select t.*,p.id projectId,p.name projectName
+		from tms_teams t,tms_projects p
+		where t.projectId=p.id;
+方案2
+select t.*,p.id projectId,p.name projectName
+from tms_teams t join tms_projects p
+on t.projectId=p.id
+方案3
+select t.*,p.id,p.name
+from tms_teams t join
+(select id,name from tms_projects) p
+where t.projectId=p.id
